@@ -1,11 +1,11 @@
 {
-  "name": "univunix-ghost-theme",
-  "version": "0.0.1",
+  "name": "univunix",
+  "version": "1.0.0",
   "description": "Theme of UnivUnix for Ghost CMS.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "engines": {
+    "ghost": ">=1.2.0"
   },
+  "license": "CC-BY-NC-SA-3.0",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/UnivUnix/univunix-ghost-theme.git"
@@ -15,8 +15,11 @@
     "theme",
     "univunix"
   ],
-  "author": { "name": "Ángel González", "email": "aglezabad@gmail.com" },
-  "license": "CC-BY-NC-SA-3.0",
+  "author": {
+    "name": "Ángel González",
+    "email": "aglezabad@gmail.com",
+    "url": "https://univunix.com"
+  },
   "bugs": {
     "url": "https://github.com/UnivUnix/univunix-ghost-theme/issues"
   },

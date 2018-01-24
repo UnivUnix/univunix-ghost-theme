@@ -1,0 +1,24 @@
+{{!< default}}
+<main class="main_unvx" role="main">
+  {{#post}}
+    <article class="article_unvx" role="article" itemscope itemtype="http://schema.org/Article">
+      <header class="artheader_unvx">
+        <time class="date_unvx" datetime="{{date format="YYYY-MM-DD"}}" itemprop="datePublished">{{date format='dddd DD MMM YYYY'}}</time>
+        <h1 class="arttitle_unvx" itemprop="headline">{{title}}</h1>
+      </header>
+      <div class="artcontent_unvx" itemprop="articleBody">
+        {{content}}
+      </div>
+      {{#if tags}}
+        <div class="arttags_unvx">
+          Tags: {{tags separator=" | "}}
+        </div>
+      {{/if}}
+    </article>
+  {{/post}}
+  {{#if pagination}}
+    <div class="pagination_unvx">
+      {{{pagination}}}
+    </div>
+  {{/if}}
+</main>
