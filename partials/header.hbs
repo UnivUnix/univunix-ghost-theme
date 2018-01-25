@@ -1,0 +1,46 @@
+<div role="banner" class="header_unvx pure-g">
+  <a href="#" id="toggle" class="toggle">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span> 
+  </a>
+  <div class="pure-u-1 pure-u-md-1-5">
+    <nav class="heading_unvx pure-menu">
+      <a href="{{@blog.url}}" class="pure-menu-heading pure-menu-link">
+        <img src="/icons/logo2016.svg"/>
+        <span class="title-first">Univ</span>
+        <span class="title-second">Unix</span>
+      </a>
+    </nav>
+  </div>
+  <div class="pure-u-1 pure-u-md-4-5">
+    <nav class="menu_unvx pure-menu pure-menu-horizontal can-transform">
+      <ul class="pure-menu-list">
+        <!-- CATEGORIES -->
+        <li class="pure-menu-item pure-menu-has-children">
+          <a href="#" class="pure-menu-link">Categorías</a>
+          <ul class="pure-menu-children">
+            <% for item in @getCollection("categories").toJSON() : %>
+              <li class="pure-menu-item unvx-category-item">
+                <a href="<%= @getFullURL(item.url) %>" class="pure-menu-link <%= "selected" if @document.url is item.url %>">
+                  <span><%= item.title %></span>
+                </a>
+              </li>
+            <% end %>
+          </ul>
+        </li>
+        <!-- PAGES -->
+        <li class="pure-menu-item pure-menu-has-children">
+          <a href="#" class="pure-menu-link">Páginas</a>
+          <ul class="pure-menu-children">
+            <li class="pure-menu-item">
+              <a href="/pages/lssi" class="pure-menu-link">
+                LSSI
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>

@@ -5,7 +5,7 @@
   "engines": {
     "ghost": ">=1.2.0"
   },
-  "license": "CC-BY-NC-SA-3.0",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/UnivUnix/univunix-ghost-theme.git"
@@ -23,5 +23,15 @@
   "bugs": {
     "url": "https://github.com/UnivUnix/univunix-ghost-theme/issues"
   },
-  "homepage": "https://github.com/UnivUnix/univunix-ghost-theme#readme"
+  "homepage": "https://github.com/UnivUnix/univunix-ghost-theme#readme",
+  "config": {
+    "posts_per_page": 25
+  },
+  "gpm": {
+    "type": "theme",
+    "categories": [
+        "Minimal",
+        "Personal Blogs"
+    ]
+  }
 }

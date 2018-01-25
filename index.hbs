@@ -1,7 +1,8 @@
 {{!< default}}
-<main class="main_unvx" role="main">
+{{> header}}
+<main class="main_unvx pure-g" role="main">
   {{#foreach posts}}
-    <article class="article_unvx" role="article" itemscope itemtype="http://schema.org/Article">
+    <article class="article_unvx pure-u-1 pure-u-md-1-2 pure-u-lg-1-4" role="article" itemscope itemtype="http://schema.org/Article">
       <header class="artheader_unvx">
         <time class="date_unvx" datetime="{{date format="YYYY-MM-DD"}}" itemprop="datePublished">{{date format='dddd DD MMM YYYY'}}</time>
         <h1 class="arttitle_unvx" itemprop="headline"><a href="{{{url}}}" rel="bookmark">{{title}}</a></h1>
@@ -22,3 +23,4 @@
     </div>
   {{/if}}
 </main>
+{{> footer}}
