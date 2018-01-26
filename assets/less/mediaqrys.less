@@ -1,0 +1,47 @@
+@media (max-width: 47.999em) {
+  .header_unvx {
+    .toggle {
+      display: block;
+    }
+    .pure-menu-heading {
+      width: 86%;
+      width: ~"calc(100% - 4.587em)";
+    }
+    &.open {
+      overflow-y: auto;
+      height: 100vh;
+      background: darken(@unvx-main, 10%);
+      .menu_unvx {
+        visibility: visible;
+        opacity: 1;
+        -webkit-transition: opacity .25s linear;
+        -moz-transition: opacity .25s linear;
+        -ms-transition: opacity .25s linear;
+        -o-transition: opacity .25s linear;
+        transition: opacity .25s linear;
+      }
+    }
+    .menu_unvx {
+      visibility: hidden;
+      opacity: 0;
+      -webkit-transition: visibility 0s .25s, opacity .25s linear;
+      -moz-transition: visibility 0s .25s, opacity .25s linear;
+      -ms-transition: visibility 0s .25s, opacity .25s linear;
+      -o-transition: visibility 0s .25s, opacity .25s linear;
+      transition: visibility 0s .25s, opacity .25s linear;
+      text-align: left;
+      .pure-menu-children {
+        left: 0;
+        top: auto;
+        width: 100%;
+        .pure-menu-item {
+          width: 100%;
+        }
+      }
+      .pure-menu-item {
+        width: 86%;
+        width: ~"calc(100% - 2.587em)";
+      }
+    }
+  }
+}

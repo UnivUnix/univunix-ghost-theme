@@ -9,6 +9,7 @@
     <title>{{meta_title}}</title>
 
     {{! Styles }}
+    <link rel="stylesheet" type="text/css" href="{{asset "assets/css/font-awesome-min.css"}}">
     <link rel="stylesheet" type="text/css" href="{{asset "assets/css/pure-min.css"}}">
     <link rel="stylesheet" type="text/css" href="{{asset "assets/css/grids-responsive-min.css"}}">
     <link rel="stylesheet" type="text/css" href="{{asset "assets/css/style.css"}}">
@@ -17,12 +18,14 @@
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     {{ghost_head}}
   </head>
   <body class="{{body_class}}">
     <div class="wrapper_unvx">
       {{{body}}}
     </div>
+    {{{block "scripts"}}}
     {{ghost_foot}}
   </body>
 </html>

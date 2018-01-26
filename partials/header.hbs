@@ -7,9 +7,10 @@
   <div class="pure-u-1 pure-u-md-1-5">
     <nav class="heading_unvx pure-menu">
       <a href="{{@blog.url}}" class="pure-menu-heading pure-menu-link">
-        <img src="/icons/logo2016.svg"/>
-        <span class="title-first">Univ</span>
-        <span class="title-second">Unix</span>
+        {{#if @blog.icon}}
+            <img src="{{@blog.icon}}" alt="{{@blog.title}} icon" />
+        {{/if}}
+        <span class="title_unvx">{{@blog.title}}</span>
       </a>
     </nav>
   </div>
@@ -20,13 +21,11 @@
         <li class="pure-menu-item pure-menu-has-children">
           <a href="#" class="pure-menu-link">Categorías</a>
           <ul class="pure-menu-children">
-            <% for item in @getCollection("categories").toJSON() : %>
               <li class="pure-menu-item unvx-category-item">
-                <a href="<%= @getFullURL(item.url) %>" class="pure-menu-link <%= "selected" if @document.url is item.url %>">
-                  <span><%= item.title %></span>
+                <a href="" class="pure-menu-link">
+                  <span></span>
                 </a>
               </li>
-            <% end %>
           </ul>
         </li>
         <!-- PAGES -->
@@ -40,7 +39,27 @@
             </li>
           </ul>
         </li>
+        {{#if @blog.twitter}}
+          <li class="pure-menu-item social_unvx">
+            <a href="{{twitter_url @blog.twitter}}" class="pure-menu-link" rel="noopener" target="_blank">
+              <i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i>
+              <span>Twitter</span>
+            </a>
+          </li>
+        {{/if}}
+        {{#if @blog.facebook}}
+          <li class="pure-menu-item social_unvx">
+            <a href="{{facebook_url @blog.facebook}}" class="pure-menu-link" target="_blank" rel="noopener">
+              <i class="fab fa-fw fa-facebook-square" aria-hidden="true"></i>
+              <span>Facebook</span>
+            </a>
+          </li>
+        {{/if}}
       </ul>
     </nav>
   </div>
 </div>
+
+{{#contentFor "scripts"}}
+<script type="text/javascript" src="{{asset "assets/js/menu-toggle.js"}}"></script>
+{{/contentFor}}

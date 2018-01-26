@@ -4,12 +4,12 @@
   left: 0;
   width: 100%;
   height: 2.587em;
-  -webkit-transition: height .5s;
-  -moz-transition: height .5s;
-  -ms-transition: height .5s;
-  -o-transition: height .5s;
+  -webkit-transition: height .25s;
+  -moz-transition: height .25s;
+  -ms-transition: height .25s;
+  -o-transition: height .25s;
   transition-property: background-color, height;
-  transition-duration: .5s, 1s;
+  transition-duration: .25s, 1s;
   border-bottom: .2em solid desaturate(@unvx-main, 70%);
   border-bottom: .2em solid fadeout(@natural-white, 30%);
   background: darken(@unvx-main, 10%);
@@ -24,21 +24,21 @@
     padding: 1em 0.5em;
     width: 2.587em;
     height: 2.587em;
-    -webkit-transition: all .5s;
-    -moz-transition: all .5s;
-    -ms-transition: all .5s;
-    -o-transition: all .5s;
-    transition: all .5s;
+    -webkit-transition: all .25s;
+    -moz-transition: all .25s;
+    -ms-transition: all .25s;
+    -o-transition: all .25s;
+    transition: all .25s;
     .bar {
       position: absolute;
       display: block;
       width: 1.5em;
       height: .1em;
-      -webkit-transition: all .5s;
-      -moz-transition: all .5s;
-      -ms-transition: all .5s;
-      -o-transition: all .5s;
-      transition: all .5s;
+      -webkit-transition: all .25s;
+      -moz-transition: all .25s;
+      -ms-transition: all .25s;
+      -o-transition: all .25s;
+      transition: all .25s;
       -webkit-border-radius: 30em;
       -moz-border-radius: 30em;
       border-radius: 30em;
@@ -92,19 +92,26 @@
         }
       }
     }
-    .pure-menu-item .pure-menu-link {
-      font-weight: 400;
-      color: @natural-white;
-      background: darken(@unvx-main, 10%);
-      background: @transparent;
-      &:hover, &.selected {
-        color: black;
-        -webkit-border-radius: .2em;
-        -moz-border-radius: .2em;
-        border-radius: .2em;
-        background: @natural-white;
-        background: fadeout(@natural-white, 30%);
-        -khtml-border-radius: .2em;
+    .pure-menu-item {
+      &.social_unvx {
+        span {
+          display: none;
+        }
+      }
+      .pure-menu-link {
+        font-weight: 400;
+        color: @natural-white;
+        background: darken(@unvx-main, 10%);
+        background: @transparent;
+        &:hover, &.selected {
+          color: black;
+          -webkit-border-radius: .2em;
+          -moz-border-radius: .2em;
+          border-radius: .2em;
+          background: @natural-white;
+          background: fadeout(@natural-white, 30%);
+          -khtml-border-radius: .2em;
+        }
       }
     }
   }
@@ -125,13 +132,8 @@
         -khtml-border-radius: .2em;
       }
     }
-    .title-first {
-      font-weight: 300;
-      margin-right: -.05em;
-    }
-    .title-second {
+    .unvx_title {
       font-weight: 700;
-      margin-left: -.05em;
     }
     img {
       width: 1.9em;
@@ -143,25 +145,21 @@
 
 .pure-menu-has-children > .pure-menu-link {
   &::after {
-    font-family: "FontAwesome";
-    font-style: normal;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
     content: "\f138";
   }
 }
 
 .pure-menu-horizontal .pure-menu-has-children > .pure-menu-link {
   &::after {
-    font-family: "FontAwesome";
-    font-style: normal;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
     content: "\f13a";
   }
 }
 
 .footer_unvx {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  overflow: hidden;
   width: 100%;
   height: 2.587em;
   border-top: .2em solid darken(@unvx-alt, 10%);
@@ -169,21 +167,16 @@
   background: darken(@unvx-alt, 30%);
   background: fadeout(darken(@unvx-alt, 30%), 30%);
   box-shadow: .1em .1em 0 fadeout(black, 90%);
-  .unvx-footer-menu {
+  .menu_unvx{
     padding: .2em;
     text-align: center;
-    #copyright {
+    .copyright {
       display: inline-block;
       padding: .5em;
       vertical-align: middle;
       color: @natural-white;
     }
     .pure-menu-item {
-      &.unvx-menu-social-item {
-        span {
-          display: none;
-        }
-      }
       a {
         font-weight: 400;
         color: @natural-white;
