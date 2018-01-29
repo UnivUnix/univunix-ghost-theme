@@ -26,6 +26,13 @@
       {{{body}}}
     </div>
     {{{block "scripts"}}}
+    <script src="{{asset "assets/js/blazy-min.js"}}"></script>
+    <script>
+      var bLazy = new Blazy({
+        offset: 250,
+        src: 'lazy-src'
+      });
+    </script>
     {{ghost_foot}}
   </body>
 </html>
