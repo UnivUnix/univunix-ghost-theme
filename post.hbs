@@ -1,55 +1,66 @@
 {{!< default}}
 {{> header}}
-<main class="main_unvx" role="main">
+<main class="main_unvx pure-g" role="main">
   {{#post}}
-    <article class="article_unvx" role="article" itemtype="http://schema.org/Article">
-      <header>
-        <h1 class="title" itemprop="headline">{{title}}</h1>
-        <span>
-          <i class="fa fa-calendar" aria-hidden="true"></i>
-          <time datetime="{{date format="YYYY-MM-DD"}}" itemprop="datePublished">{{date format='dddd DD MMM YYYY'}}</time>
-        </span>
-        <span>
-          <i class="fa fa-user" aria-hidden="true"></i>
-          Escrito por: {{author}}
-        </span>
-      </header>
-      <section class="content">
-        {{content}}
-      </section>
-      <footer class="pure-menu pure-menu-horizontal">
-        <span>Comparte:</span>
-        <ul class="pure-menu-list">
-          <!-- SOCIAL LINKS -->
-          <li class="pure-menu-item">
-            <a href="https://twitter.com/intent/tweet?url={{url absolute="true"}}&text={{encode title}}&via={{encode @blog.title}}" class="pure-menu-link" target="noopener">
-              <i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i>
-            </a>
-          </li>
-          <li class="pure-menu-item">
-            <a href="https://plus.google.com/share?url={{url absolute="true"}}" class="pure-menu-link" target="noopener">
-              <i class="fab fa-fw fa-google-plus-square" aria-hidden="true"></i>
-            </a>
-          </li>
-          <li class="pure-menu-item">
-            <a href="https://www.linkedin.com/shareArticle?url={{url absolute="true"}}&title={{encode title}}" class="pure-menu-link" target="noopener">
-              <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i>
-            </a>
-          </li>
-          <li class="pure-menu-item">
-            <a href="https://telegram.me/share/url?url={{url absolute="true"}}&text={{encode title}}" class="pure-menu-link" target="noopener">
-              <i class="fab fa-fw fa-telegram" aria-hidden="true"></i>
-            </a>
-          </li>
-          <!-- END SOCIAL LINKS -->
-        </ul>
-      </footer>
-      {{#if tags}}
-        <div class="arttags_unvx">
-          Tags: {{tags separator=" | "}}
-        </div>
-      {{/if}}
-    </article>
+    <div class="pure-u-1">
+      <article class="article_unvx" role="article" itemtype="http://schema.org/Article">
+        <header>
+          <h1 class="title" itemprop="headline">{{title}}</h1>
+          <span>
+            <i class="fa fa-calendar" aria-hidden="true"></i>
+            <time datetime="{{date format="YYYY-MM-DD"}}" itemprop="datePublished">{{date format='dddd DD MMM YYYY'}}</time>
+          </span>
+          <span>
+            <i class="fa fa-user" aria-hidden="true"></i>
+            Escrito por: {{author}}
+          </span>
+        </header>
+        <section class="content">
+          {{content}}
+        </section>
+        <footer>
+          <div class="pure-menu pure-menu-horizontal">
+            <span>Comparte:</span>
+            <ul class="pure-menu-list">
+              <!-- SOCIAL LINKS -->
+              <li class="pure-menu-item">
+                <a href="https://twitter.com/intent/tweet?url={{url absolute="true"}}&text={{encode title}}&via={{encode @blog.title}}" class="pure-menu-link" target="noopener">
+                  <i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li class="pure-menu-item">
+                <a href="https://plus.google.com/share?url={{url absolute="true"}}" class="pure-menu-link" target="noopener">
+                  <i class="fab fa-fw fa-google-plus-square" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li class="pure-menu-item">
+                <a href="https://www.linkedin.com/shareArticle?url={{url absolute="true"}}&title={{encode title}}" class="pure-menu-link" target="noopener">
+                  <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li class="pure-menu-item">
+                <a href="https://telegram.me/share/url?url={{url absolute="true"}}&text={{encode title}}" class="pure-menu-link" target="noopener">
+                  <i class="fab fa-fw fa-telegram" aria-hidden="true"></i>
+                </a>
+              </li>
+              <!-- END SOCIAL LINKS -->
+            </ul>
+          </div>
+          {{#if tags}}
+            <div class="pure-menu pure-menu-horizontal">
+              <span>Tags:</span>
+              <ul class="pure-menu-list">
+                {{#foreach tags}}
+                  <li class="pure-menu-item">
+                    <a href="{{url}}" class="pure-menu-link">{{name}}</a>
+                  </li>
+                {{/foreach}}
+              </ul>
+            </div>
+          {{/if}}
+        </footer>
+      </article>
+    </div>
   {{/post}}
   {{#if pagination}}
     <div class="pagination_unvx">

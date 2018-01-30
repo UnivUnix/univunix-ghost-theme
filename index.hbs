@@ -21,12 +21,15 @@
             <i class="fa fa-user" aria-hidden="true"></i>
             {{author}}
           </span>
+          {{#if tags}}
+            <span>
+              <i class="fa fa-tags" aria-hidden="true"></i>
+              {{#foreach tags}}
+                <a href="{{url}}">{{name}}</a>
+              {{/foreach}}
+            </span>
+          {{/if}}
         </footer>
-        {{#if tags}}
-          <div class="arttags_unvx">
-            Tags: {{tags separator=" | "}}
-          </div>
-        {{/if}}
       </article>
     </div>
   {{/foreach}}

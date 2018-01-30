@@ -1,0 +1,40 @@
+{{!< default}}
+{{> header}}
+<main class="main_unvx pure-g" role="main">
+  {{#post}}
+    <div class="pure-u-1">
+      <article class="article_unvx" role="article" itemtype="http://schema.org/Article">
+        <header>
+          <h1 class="title" itemprop="headline">{{title}}</h1>
+          <span>
+            <i class="fa fa-calendar" aria-hidden="true"></i>
+            <time datetime="{{date format="YYYY-MM-DD"}}" itemprop="datePublished">{{date format='dddd DD MMM YYYY'}}</time>
+          </span>
+        </header>
+        <section class="content">
+          {{content}}
+        </section>
+        <footer>
+          {{#if tags}}
+            <div class="pure-menu pure-menu-horizontal">
+              <span>Tags:</span>
+              <ul class="pure-menu-list">
+                {{#foreach tags}}
+                  <li class="pure-menu-item">
+                    <a href="{{url}}" class="pure-menu-link">{{name}}</a>
+                  </li>
+                {{/foreach}}
+              </ul>
+            </div>
+          {{/if}}
+        </footer>
+      </article>
+    </div>
+  {{/post}}
+  {{#if pagination}}
+    <div class="pagination_unvx">
+      {{{pagination}}}
+    </div>
+  {{/if}}
+</main>
+{{> footer}}
