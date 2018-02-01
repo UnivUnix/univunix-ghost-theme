@@ -3,7 +3,7 @@
 <main class="main_unvx pure-g" role="main">
   {{#post}}
     <div class="pure-u-1">
-      <article class="article_unvx" role="article" itemtype="http://schema.org/Article">
+      <article class="article_unvx" role="page" itemtype="http://schema.org/Page">
         <header>
           <h1 class="title" itemprop="headline">{{title}}</h1>
           <span>
@@ -17,7 +17,7 @@
         <footer>
           {{#if tags}}
             <div class="pure-menu pure-menu-horizontal">
-              <span>Tags:</span>
+              <span>{{t "Tags"}}:</span>
               <ul class="pure-menu-list">
                 {{#foreach tags}}
                   <li class="pure-menu-item">

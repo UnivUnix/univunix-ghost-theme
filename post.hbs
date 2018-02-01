@@ -4,7 +4,7 @@
   {{#post}}
     <div class="pure-u-1">
       <article class="article_unvx" role="article" itemtype="http://schema.org/Article">
-        <header>
+        <header class="bg-img">
           <h1 class="title" itemprop="headline">{{title}}</h1>
           <span>
             <i class="fa fa-calendar" aria-hidden="true"></i>
@@ -12,7 +12,7 @@
           </span>
           <span>
             <i class="fa fa-user" aria-hidden="true"></i>
-            Escrito por: {{author}}
+            {{t "Written by"}}: {{author}}
           </span>
         </header>
         <section class="content">
@@ -20,7 +20,7 @@
         </section>
         <footer>
           <div class="pure-menu pure-menu-horizontal">
-            <span>Comparte:</span>
+            <span>{{t "Share"}}:</span>
             <ul class="pure-menu-list">
               <!-- SOCIAL LINKS -->
               <li class="pure-menu-item">
@@ -48,7 +48,7 @@
           </div>
           {{#if tags}}
             <div class="pure-menu pure-menu-horizontal">
-              <span>Tags:</span>
+              <span>{{t "Tags"}}:</span>
               <ul class="pure-menu-list">
                 {{#foreach tags}}
                   <li class="pure-menu-item">
@@ -69,3 +69,15 @@
   {{/if}}
 </main>
 {{> footer}}
+
+
+{{#contentFor "styles"}}
+  {{#post}}
+    <style type="text/css">
+      header.bg-img {
+        background: url({{feature_image}}) no-repeat center center;
+        background-size: cover;
+      }
+    </style>
+  {{/post}}
+{{/contentFor}}
