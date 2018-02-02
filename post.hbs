@@ -18,6 +18,27 @@
         <section class="content">
           {{content}}
         </section>
+        <section class="author">
+          {{#author}}
+            <section class="author-card">
+              {{#if profile_image}}
+                <img class="author-profile-image" src="{{profile_image}}" alt="{{name}}" />
+              {{/if}}
+              <section class="author-card-content">
+                <h4 class="author-card-name"><a href="{{url}}">{{name}}</a></h4>
+                  {{#if bio}}
+                    <p>{{bio}}</p>
+                  {{else}}
+                    <p>Read <a href="{{url}}">more posts</a> by this author.</p>
+                  {{/if}}
+                </section>
+              </section>
+              <div class="post-full-footer-right">
+                <a class="pure-button" href="{{url}}">Read More</a>
+              </div>
+            </section>
+          {{/author}}
+        </section>
         <footer>
           <div class="pure-menu pure-menu-horizontal">
             <span>{{t "Share"}}:</span>
@@ -75,7 +96,7 @@
   {{#post}}
     <style type="text/css">
       header.bg-img {
-        background: url({{feature_image}}) no-repeat center center;
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url({{feature_image}}) no-repeat center center;
         background-size: cover;
       }
     </style>

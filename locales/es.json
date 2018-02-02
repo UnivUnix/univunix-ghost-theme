@@ -3,5 +3,9 @@
 	"Pages":"Páginas",
 	"Latest posts":"Últimos artículos",
 	"Share":"Comparte",
-	"Written by":"Escrito por"
+	"Written by":"Escrito por",
+	"The document that are you trying to open does not exist or it's moved somewhere.":"El documento que intenta abrir no existe o ha sido movido a otro lugar.",
+	"You can go back to ":"Puedes volver a la ",
+	"index page.":"página de inicio.",
+	"Author":"Autor"
 }

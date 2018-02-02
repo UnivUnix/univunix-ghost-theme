@@ -4,7 +4,7 @@
   {{#post}}
     <div class="pure-u-1">
       <article class="article_unvx" role="page" itemtype="http://schema.org/Page">
-        <header>
+        <header class="bg-img">
           <h1 class="title" itemprop="headline">{{title}}</h1>
           <span>
             <i class="fa fa-calendar" aria-hidden="true"></i>
@@ -38,3 +38,14 @@
   {{/if}}
 </main>
 {{> footer}}
+
+{{#contentFor "styles"}}
+  {{#post}}
+    <style type="text/css">
+      header.bg-img {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url({{feature_image}}) no-repeat center center;
+        background-size: cover;
+      }
+    </style>
+  {{/post}}
+{{/contentFor}}
