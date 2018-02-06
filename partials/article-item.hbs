@@ -1,0 +1,30 @@
+<div class="pure-u-1 pure-u-sm-1-2 pure-u-md-1-4">
+  <article class="article_unvx_item" role="article" itemtype="http://schema.org/Article">
+    <header>
+      <h1 class="title"><a href="{{url}}">{{title}}</a></h1>
+    </header>
+    <div class="featured-img">
+      <a href="{{url}}">
+        <img class="b-lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAroAAAGMAQMAAAAP+JN3AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4AwMCAkAimcJagAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAA1BMVEX///+nxBvIAAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAA5SURBVBgZ7cExAQAAAMIg+6deDQ9gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMcCiawAAdNN5hUAAAAASUVORK5CYII=" lazy-src="{{feature_image}}">
+      </a>
+    </div>
+    <footer>
+      <span>
+        <i class="fa fa-calendar" aria-hidden="true"></i>
+        <time datetime="{{date format="YYYY-MM-DD"}}" itemprop="datePublished">{{date format='dddd DD MMM YYYY'}}</time>
+      </span>
+      <span>
+        <i class="fa fa-user" aria-hidden="true"></i>
+        {{author}}
+      </span>
+      {{#if tags}}
+        <span>
+          <i class="fa fa-tags" aria-hidden="true"></i>
+          {{#foreach tags}}
+            <a href="{{url}}">{{name}}</a>
+          {{/foreach}}
+        </span>
+      {{/if}}
+    </footer>
+  </article>
+</div>

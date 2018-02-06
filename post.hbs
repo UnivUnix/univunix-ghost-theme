@@ -29,12 +29,12 @@
                   {{#if bio}}
                     <p>{{bio}}</p>
                   {{else}}
-                    <p>Read <a href="{{url}}">more posts</a> by this author.</p>
+                    <p>{{t "Read "}}<a href="{{url}}">{{t "more posts"}}</a>{{t " by this author."}}</p>
                   {{/if}}
                 </section>
               </section>
               <div class="post-full-footer-right">
-                <a class="pure-button" href="{{url}}">Read More</a>
+                <a class="pure-button" href="{{url}}">{{t "Read more"}}</a>
               </div>
             </section>
           {{/author}}
