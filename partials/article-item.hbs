@@ -15,14 +15,12 @@
       </span>
       <span>
         <i class="fa fa-user" aria-hidden="true"></i>
-        {{author}}
+        {{authors separator=", " limit="3"}}
       </span>
       {{#if tags}}
         <span>
           <i class="fa fa-tags" aria-hidden="true"></i>
-          {{#foreach tags}}
-            <a href="{{url}}">{{name}}</a>
-          {{/foreach}}
+          {{tags separator=", " limit="3"}}
         </span>
       {{/if}}
     </footer>
