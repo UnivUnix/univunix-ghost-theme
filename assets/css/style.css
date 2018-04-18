@@ -256,6 +256,19 @@ body .main_unvx > div > .title {
 .article_unvx .content a:active {
   text-decoration: underline;
 }
+.article_unvx .content img[src$="#full"] {
+  width: 100%;
+}
+.article_unvx .content img[src$="#center"] {
+  display: block;
+  margin: 0 auto;
+}
+.article_unvx .content img[src$="#lfloat"] {
+  float: left;
+}
+.article_unvx .content img[src$="#rfloat"] {
+  float: right;
+}
 .article_unvx .author {
   padding: .5em 1em .5em 1em;
   border-top: 0.2em solid #808080;
