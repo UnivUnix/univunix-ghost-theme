@@ -94,7 +94,7 @@ body .main_unvx > div > .title {
   transform: rotate(-45deg);
 }
 .header_unvx .menu_unvx {
-  padding: .05em .2em;
+  padding: .2em .2em;
   text-align: right;
 }
 .header_unvx .menu_unvx .pure-menu-children {
@@ -139,7 +139,7 @@ body .main_unvx > div > .title {
   -khtml-border-radius: .2em;
 }
 .header_unvx .heading_unvx {
-  padding: .05em .2em;
+  padding: .2em .2em;
 }
 .header_unvx .heading_unvx .pure-menu-heading {
   font-weight: 400;
@@ -184,7 +184,7 @@ body .main_unvx > div > .title {
   box-shadow: 0.1em 0.1em 0 rgba(0, 0, 0, 0.1);
 }
 .footer_unvx .menu_unvx {
-  padding: .05em .2em;
+  padding: .2em .2em;
   text-align: center;
 }
 .footer_unvx .menu_unvx .copyright {
@@ -216,7 +216,7 @@ body .main_unvx > div > .title {
   box-shadow: 0 0.1em 0.1em rgba(0, 0, 0, 0.1);
 }
 .article_unvx header {
-  padding: 10em 1em .5em 1em;
+  padding: 10em 2.5% .5em 2.5%;
   border-bottom: 0.2em solid #2c5151;
   border-bottom: 0.2em solid rgba(250, 250, 250, 0.7);
   background: #004a4a;
@@ -240,7 +240,7 @@ body .main_unvx > div > .title {
   color: inherit;
 }
 .article_unvx .content {
-  padding: .5em 1em .5em 1em;
+  padding: .5em 10% .5em 10%;
   background: #ededed;
   color: #343434;
 }
@@ -255,6 +255,12 @@ body .main_unvx > div > .title {
 .article_unvx .content a:hover,
 .article_unvx .content a:active {
   text-decoration: underline;
+}
+.article_unvx .content blockquote {
+  padding: .5em 1em;
+  background: #9a9a9a;
+  border: solid #676767 0.2em;
+  border-radius: .25em;
 }
 .article_unvx .content img[src$="#full"] {
   width: 100%;
