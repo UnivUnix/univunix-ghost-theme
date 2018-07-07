@@ -3,6 +3,9 @@
   background: darken(@unvx-main, 10%);
   background: fadeout(darken(@unvx-main, 10%), 20%);
   box-shadow: 0 .1em .1em fadeout(black, 90%);
+  max-width: 1040px;
+  margin: 0 auto;
+
   header {
     padding: 10em 2.5% .5em 2.5%;
     border-bottom: .2em solid desaturate(@unvx-main, 70%);
@@ -28,13 +31,12 @@
     }
   }
   .content {
-    padding: .5em 10% .5em 10%;
     background: darken(@natural-white, 5%);
     color: darken(@unvx-alt, 30%);
-
     .kg-post {
-      display: flex;
-      flex-direction: column;
+      padding: .5em 0;
+      max-width: 920px;
+      margin: 0 auto;
 
       figcaption {
         font-size: 80%;
@@ -43,8 +45,8 @@
       }
 
       .kg-image-card {
-        text-align: center;
         margin: 0 0 1.5em;
+        text-align: center;
 
         figcaption {
           margin: -.25em 0 1.5em;
@@ -55,7 +57,7 @@
         }
 
         .kg-image-wide {
-
+          max-width: 1040px;
         }
 
         .kg-image-full {
