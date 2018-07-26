@@ -20,6 +20,26 @@ body .main_unvx {
 body .main_unvx > div > .title {
   border-bottom: 0.01em solid;
 }
+body .pagination_unvx .newer-posts {
+  text-align: left;
+}
+body .pagination_unvx .newer-posts .pure-button {
+  margin: 0.5em;
+}
+body .pagination_unvx .older-posts {
+  text-align: right;
+}
+body .pagination_unvx .older-posts .pure-button {
+  margin: 0.5em;
+}
+body .pagination_unvx .page-position {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .pagination_unvx .page-position span {
+  display: inline-block;
+}
 .header_unvx {
   position: fixed;
   top: 0;
@@ -264,36 +284,36 @@ body .main_unvx > div > .title {
     }
     */
 }
-.article_unvx .content .kg-post {
-  padding: 0.5em 0;
+.article_unvx .content .content-text {
+  padding: 0.5em;
   max-width: 920px;
   margin: 0 auto;
 }
-.article_unvx .content .kg-post figcaption {
+.article_unvx .content .content-text figcaption {
   font-size: 80%;
   line-height: 1.6em;
   text-align: center;
 }
-.article_unvx .content .kg-post .kg-image-card {
+.article_unvx .content .content-text .kg-image-card {
   margin: 0 0 1.5em;
   text-align: center;
 }
-.article_unvx .content .kg-post .kg-image-card figcaption {
+.article_unvx .content .content-text .kg-image-card figcaption {
   margin: -0.25em 0 1.5em;
 }
-.article_unvx .content .kg-post .kg-image-card .kg-image {
+.article_unvx .content .content-text .kg-image-card .kg-image {
   max-width: 100%;
 }
-.article_unvx .content .kg-post .kg-image-card .kg-image-wide {
+.article_unvx .content .content-text .kg-image-card .kg-image-wide {
   max-width: 1040px;
 }
-.article_unvx .content .kg-post .kg-image-card .kg-image-full {
+.article_unvx .content .content-text .kg-image-card .kg-image-full {
   max-width: 100vw;
 }
-.article_unvx .content .kg-post .kg-image-card .kg-image-full + figcaption {
+.article_unvx .content .content-text .kg-image-card .kg-image-full + figcaption {
   padding: 0 1.5em;
 }
-.article_unvx .content .kg-post .kg-embed-card {
+.article_unvx .content .content-text .kg-embed-card {
   display: flex;
   flex-direction: column;
   align-items: center;
