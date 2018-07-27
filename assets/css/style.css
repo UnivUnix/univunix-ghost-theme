@@ -20,25 +20,14 @@ body .main_unvx {
 body .main_unvx > div > .title {
   border-bottom: 0.01em solid;
 }
-body .pagination_unvx .newer-posts {
-  text-align: left;
+body .pagination_unvx {
+  text-align: center;
 }
-body .pagination_unvx .newer-posts .pure-button {
-  margin: 0.5em;
+body .pagination_unvx .pagination_unvx_btns {
+  padding: 0.5em 0;
 }
-body .pagination_unvx .older-posts {
-  text-align: right;
-}
-body .pagination_unvx .older-posts .pure-button {
-  margin: 0.5em;
-}
-body .pagination_unvx .page-position {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-body .pagination_unvx .page-position span {
-  display: inline-block;
+body .pagination_unvx .pagination_unvx_btns .page-position {
+  pointer-events: none;
 }
 .header_unvx {
   position: fixed;
@@ -304,21 +293,24 @@ body .pagination_unvx .page-position span {
 .article_unvx .content .content-text .kg-image-card .kg-image {
   max-width: 100%;
 }
-.article_unvx .content .content-text .kg-image-card .kg-image-wide {
-  max-width: 1040px;
-}
-.article_unvx .content .content-text .kg-image-card .kg-image-full {
+.article_unvx .content .content-text .kg-image-card.kg-width-full {
   max-width: 100vw;
 }
-.article_unvx .content .content-text .kg-image-card .kg-image-full + figcaption {
+.article_unvx .content .content-text .kg-image-card.kg-width-full + figcaption {
   padding: 0 1.5em;
 }
+.article_unvx .content .content-text .kg-image-card.kg-width-wide {
+  max-width: 1040px;
+}
 .article_unvx .content .content-text .kg-embed-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 1.5em 0 3em;
-  min-width: 100%;
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 0.2em;
+}
+.article_unvx .content .content-text .kg-embed-card iframe {
+  position: absolute;
+  width: 100% !important;
+  height: 100% !important;
 }
 .article_unvx .content a:link {
   text-decoration: none;
