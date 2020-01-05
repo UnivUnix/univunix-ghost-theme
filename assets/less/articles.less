@@ -3,8 +3,11 @@
   background: darken(@unvx-main, 10%);
   background: fadeout(darken(@unvx-main, 10%), 20%);
   box-shadow: 0 .1em .1em fadeout(black, 90%);
+  max-width: 1040px;
+  margin: 0 auto;
+
   header {
-    padding: 10em 1em .5em 1em;
+    padding: 10em 2.5% .5em 2.5%;
     border-bottom: .2em solid desaturate(@unvx-main, 70%);
     border-bottom: .2em solid fadeout(@natural-white, 30%);
     background: darken(@unvx-main, 10%);
@@ -28,9 +31,57 @@
     }
   }
   .content {
-    padding: .5em 1em .5em 1em;
     background: darken(@natural-white, 5%);
     color: darken(@unvx-alt, 30%);
+    .content-text {
+      padding: .5em;
+      max-width: 920px;
+      margin: 0 auto;
+
+      figcaption {
+        font-size: 80%;
+        line-height: 1.6em;
+        text-align: center;
+      }
+
+      .kg-image-card {
+        margin: 0 0 1.5em;
+        text-align: center;
+
+        figcaption {
+          margin: -.25em 0 1.5em;
+        }
+
+        .kg-image {
+          max-width: 100%;
+        }
+
+        &.kg-width-full {
+          max-width: 100vw;
+          & + figcaption {
+            padding: 0 1.5em;
+          }
+        }
+
+        &.kg-width-wide {
+          max-width: 1040px;
+        }
+
+      }
+
+      .kg-embed-card {
+        position: relative;
+        padding-bottom: 56.25%;
+        padding-top: .2em;
+
+        iframe {
+          position: absolute;
+          width: 100% !important;
+          height: 100% !important;
+        }
+      }
+    }
+
     a:link {
       text-decoration: none;
       color: darken(@unvx-alt, 10%);
@@ -42,6 +93,33 @@
     a:hover, a:active {
       text-decoration:underline;
     }
+
+    blockquote {
+      padding: .5em 1em;
+      background: lighten(@unvx-alt, 10%);
+      border: solid darken(@unvx-alt, 10%) .2em;
+      border-radius: .25em;
+    }
+    
+    /* 
+    // OLD GHOST
+    img[src$="#full"] {
+      width: 100%;
+    }
+
+    img[src$="#center"] {
+      display: block;
+      margin: 0 auto;
+    }
+
+    img[src$="#lfloat"] {
+      float: left;
+    }
+
+    img[src$="#rfloat"] {
+      float: right;
+    }
+    */
   }
   .author {
     padding: .5em 1em .5em 1em;
@@ -104,7 +182,7 @@
     .title {
       margin: initial;
       font-size: 1em;
-      max-height: 3em;
+      max-height: 3.5em;
       overflow: hidden;
     }
     a {

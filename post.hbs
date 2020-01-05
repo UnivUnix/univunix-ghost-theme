@@ -12,32 +12,13 @@
           </span>
           <span>
             <i class="fa fa-user" aria-hidden="true"></i>
-            {{t "Written by"}}: {{authors}}
+            {{t "Written by"}}: {{authors separator=", "}}
           </span>
         </header>
         <section class="content">
-          {{content}}
-        </section>
-        <section class="author">
-          {{#primary_author}}
-            <section class="author-card">
-              {{#if profile_image}}
-                <img class="author-profile-image" src="{{profile_image}}" alt="{{name}}" />
-              {{/if}}
-              <section class="author-card-content">
-                <h4 class="author-card-name"><a href="{{url}}">{{name}}</a></h4>
-                  {{#if bio}}
-                    <p>{{bio}}</p>
-                  {{else}}
-                    <p>{{t "Read "}}<a href="{{url}}">{{t "more posts"}}</a>{{t " by this author."}}</p>
-                  {{/if}}
-                </section>
-              </section>
-              <div class="post-full-footer-right">
-                <a class="pure-button" href="{{url}}">{{t "Read more"}}</a>
-              </div>
-            </section>
-          {{/primary_author}}
+          <div class="content-text">
+            {{content}}
+          </div>
         </section>
         <footer>
           {{> social}}
@@ -53,6 +34,20 @@
               </ul>
             </div>
           {{/if}}
+          <div id="disqus_thread"></div>
+          <script>
+            var disqus_config = function () {
+              this.page.url = "{{url absolute="true"}}";  // Replace PAGE_URL with your page's canonical URL variable
+              this.page.identifier = "ghost-{{comment_id}}"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+            };
+            (function() { // DON'T EDIT BELOW THIS LINE
+              var d = document, s = d.createElement('script');
+              s.src = 'https://univunix.disqus.com/embed.js';
+              s.setAttribute('data-timestamp', +new Date());
+              (d.head || d.body).appendChild(s);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         </footer>
       </article>
     </div>

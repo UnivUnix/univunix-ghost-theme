@@ -1,0 +1,17 @@
+<nav class="pure-g pagination_unvx" role="navigation">
+  <div class="pure-u-1">
+    <div class="pure-button-group pagination_unvx_btns" role="group" aria-label="Pagination">
+      {{#if prev}}
+        <a class="pure-button" href="{{page_url prev}}">&larr; {{t "Recent posts"}}</a>
+      {{else}}
+        <button class="pure-button pure-button-disabled">&larr; {{t "Recent posts"}}</button>
+      {{/if}}
+      <button class="pure-button page-position">{{t "Page"}} {{page}} {{t "of"}} {{pages}}</button>
+      {{#if next}}
+        <a class="pure-button " href="{{page_url next}}">{{t "Older posts"}} &rarr;</a>
+      {{else}}
+        <button class="pure-button pure-button-disabled">{{t "Older posts"}} &rarr;</button>
+      {{/if}}
+    </div>
+  </div>
+</nav>
