@@ -12,14 +12,14 @@
           </span>
           <span>
             <i class="fa fa-user" aria-hidden="true"></i>
-            {{t "Written by"}}: {{author}}
+            {{t "Written by"}}: {{authors}}
           </span>
         </header>
         <section class="content">
           {{content}}
         </section>
         <section class="author">
-          {{#author}}
+          {{#primary_author}}
             <section class="author-card">
               {{#if profile_image}}
                 <img class="author-profile-image" src="{{profile_image}}" alt="{{name}}" />
@@ -37,7 +37,7 @@
                 <a class="pure-button" href="{{url}}">{{t "Read more"}}</a>
               </div>
             </section>
-          {{/author}}
+          {{/primary_author}}
         </section>
         <footer>
           {{> social}}
