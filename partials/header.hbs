@@ -48,7 +48,7 @@
           </ul>
         </li>
         {{/get}}
-        {{#if @blog.twitter}}
+        {{#if @site.twitter}}
           <li class="pure-menu-item social_unvx">
             <a href="{{twitter_url @site.twitter}}" class="pure-menu-link" rel="noopener" target="_blank">
               <i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i>
@@ -56,7 +56,7 @@
             </a>
           </li>
         {{/if}}
-        {{#if @blog.facebook}}
+        {{#if @site.facebook}}
           <li class="pure-menu-item social_unvx">
             <a href="{{facebook_url @site.facebook}}" class="pure-menu-link" target="_blank" rel="noopener">
               <i class="fab fa-fw fa-facebook-square" aria-hidden="true"></i>
