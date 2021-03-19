@@ -3,7 +3,8 @@
   "version": "1.4.0",
   "description": "Theme of UnivUnix for Ghost CMS.",
   "engines": {
-    "ghost": ">=1.2.0"
+    "ghost": ">=1.2.0",
+    "ghost-api": "v4"
   },
   "license": "MIT",
   "repository": {
@@ -26,7 +27,15 @@
   },
   "homepage": "https://github.com/UnivUnix/univunix-ghost-theme#readme",
   "config": {
-    "posts_per_page": 8
+    "posts_per_page": 8,
+    "image_sizes": {
+      "article-item": {
+        "width": 500
+      },
+      "post-header": {
+        "width": 1024
+      }
+    }
   },
   "gpm": {
     "type": "theme",

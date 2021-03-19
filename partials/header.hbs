@@ -17,54 +17,7 @@
   </div>
   <div class="pure-u-1 pure-u-md-4-5">
     <nav class="menu_unvx pure-menu pure-menu-horizontal can-transform">
-      <ul class="pure-menu-list">
-        <!-- CATEGORIES -->
-        {{#get "tags" include="count.posts"}}
-        <li class="pure-menu-item pure-menu-has-children">
-          <a href="#" class="pure-menu-link">{{t "Tags"}}</a>
-          <ul class="pure-menu-children">
-            {{#foreach tags}}
-              <li class="pure-menu-item unvx-category-item">
-                <a href="{{url}}" title="{{name}}" class="pure-menu-link">
-                  <span>{{name}}</span>
-                </a>
-              </li>
-            {{/foreach}}
-          </ul>
-        </li>
-        {{/get}}
-        <!-- PAGES -->
-        {{#get "posts" filter="page:true" as |pages|}}
-        <li class="pure-menu-item pure-menu-has-children">
-          <a href="#" class="pure-menu-link">{{t "Pages"}}</a>
-          <ul class="pure-menu-children">
-            {{#foreach pages}}
-              <li class="pure-menu-item">
-                <a href="{{url}}" title="{{title}}" class="pure-menu-link">
-                  {{title}}
-                </a>
-              </li>
-            {{/foreach}}
-          </ul>
-        </li>
-        {{/get}}
-        {{#if @site.twitter}}
-          <li class="pure-menu-item social_unvx">
-            <a href="{{twitter_url @site.twitter}}" class="pure-menu-link" rel="noopener" target="_blank">
-              <i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i>
-              <span>Twitter</span>
-            </a>
-          </li>
-        {{/if}}
-        {{#if @site.facebook}}
-          <li class="pure-menu-item social_unvx">
-            <a href="{{facebook_url @site.facebook}}" class="pure-menu-link" target="_blank" rel="noopener">
-              <i class="fab fa-fw fa-facebook-square" aria-hidden="true"></i>
-              <span>Facebook</span>
-            </a>
-          </li>
-        {{/if}}
-      </ul>
+      {{navigation}}
     </nav>
   </div>
 </div>

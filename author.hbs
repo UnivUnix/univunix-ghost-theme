@@ -1,9 +1,11 @@
 {{!< default}}
 {{> header}}
 <main class="main_unvx pure-g" role="main">
+  {{#author}}
   <div class="pure-u-1">
-    <h1 class="title">{{t "Articles written by:"}} {{author.name}}</h1>
+    <h1 class="title">{{t "Articles written by:"}} {{name}}</h1>
   </div>
+  {{/author}}
   {{#foreach posts}}
     {{> article-item}}
   {{/foreach}}
