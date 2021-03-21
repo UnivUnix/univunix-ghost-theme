@@ -10,10 +10,10 @@
   -o-transition: height .25s;
   transition-property: background-color, height;
   transition-duration: .25s, 1s;
-  border-bottom: .2em solid desaturate(@unvx-main, 70%);
+  border-bottom: .2em solid desaturate(@color-main, 70%);
   border-bottom: .2em solid fadeout(@natural-white, 30%);
-  background: darken(@unvx-main, 10%);
-  background: fadeout(darken(@unvx-main, 10%), 20%);
+  background: darken(@color-main, 10%);
+  background: fadeout(darken(@color-main, 10%), 20%);
   box-shadow: 0 .1em .1em fadeout(black, 90%);
   .toggle {
     position: fixed;
@@ -74,7 +74,7 @@
     padding: .2em .2em;
     text-align: right;
     .pure-menu-children {
-      background: darken(@unvx-main, 10%);
+      background: darken(@color-main, 10%);
       box-shadow: 0 .1em .1em fadeout(black, 90%);
       -webkit-border-radius: .2em;
       -moz-border-radius: .2em;
@@ -85,7 +85,7 @@
       .pure-menu-item .pure-menu-link {
         font-weight: 400;
         color: @natural-white;
-        background: darken(@unvx-main, 10%);
+        background: darken(@color-main, 10%);
         background: @transparent;
         &:hover, &.selected {
           color: black;
@@ -103,7 +103,7 @@
       .pure-menu-link {
         font-weight: 400;
         color: @natural-white;
-        background: darken(@unvx-main, 10%);
+        background: darken(@color-main, 10%);
         background: @transparent;
         &:hover, &.selected {
           color: black;
@@ -122,7 +122,7 @@
     .pure-menu-heading {
       font-weight: 400;
       color: @natural-white;
-      background: darken(@unvx-main, 10%);
+      background: darken(@color-main, 10%);
       background: @transparent;
       &:hover {
         color: black;
@@ -164,10 +164,10 @@
 .footer_unvx {
   width: 100%;
   height: 2.587em;
-  border-top: .2em solid darken(@unvx-alt, 10%);
+  border-top: .2em solid darken(@color-alt, 10%);
   border-top: .2em solid fadeout(@natural-white, 30%);
-  background: darken(@unvx-alt, 30%);
-  background: fadeout(darken(@unvx-alt, 30%), 30%);
+  background: darken(@color-alt, 30%);
+  background: fadeout(darken(@color-alt, 30%), 30%);
   box-shadow: .1em .1em 0 fadeout(black, 90%);
   .menu_unvx{
     padding: .2em .2em;
@@ -182,7 +182,7 @@
       a {
         font-weight: 400;
         color: @natural-white;
-        background: darken(@unvx-alt, 30%);
+        background: darken(@color-alt, 30%);
         background: @transparent;
         padding: .5em;
         &:hover {
