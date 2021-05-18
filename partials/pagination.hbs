@@ -1,17 +1,19 @@
+{{#has pages="count:1"}}
 <nav class="pure-g pagination_unvx" role="navigation">
   <div class="pure-u-1">
     <div class="pure-button-group pagination_unvx_btns" role="group" aria-label="Pagination">
       {{#if prev}}
-        <a class="pure-button" href="{{page_url prev}}">&larr; {{t "Recent posts"}}</a>
+        <a class="pure-button" href="{{page_url prev}}">&larr;<span class="hide-span"> {{t "Recent posts"}}</span></a>
       {{else}}
-        <button class="pure-button pure-button-disabled">&larr; {{t "Recent posts"}}</button>
+        <button class="pure-button pure-button-disabled">&larr;<span class="hide-span"> {{t "Recent posts"}}</span></button>
       {{/if}}
-      <button class="pure-button page-position">{{t "Page"}} {{page}} {{t "of"}} {{pages}}</button>
+      <button class="pure-button page-position"><span class="hide-span">{{t "Page"}} </span>{{page}} {{t "of"}} {{pages}}</button>
       {{#if next}}
-        <a class="pure-button " href="{{page_url next}}">{{t "Older posts"}} &rarr;</a>
+        <a class="pure-button " href="{{page_url next}}"><span class="hide-span">{{t "Older posts"}} </span>&rarr;</a>
       {{else}}
-        <button class="pure-button pure-button-disabled">{{t "Older posts"}} &rarr;</button>
+        <button class="pure-button pure-button-disabled"><span class="hide-span">{{t "Older posts"}} </span>&rarr;</button>
       {{/if}}
     </div>
   </div>
 </nav>
+{{/has}}

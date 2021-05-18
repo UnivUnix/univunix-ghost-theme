@@ -1,6 +1,6 @@
 {
   "name": "univunix",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "description": "Theme of UnivUnix for Ghost CMS.",
   "engines": {
     "ghost": ">=1.2.0",
