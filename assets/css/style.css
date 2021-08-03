@@ -9,7 +9,7 @@ textarea,
 html {
   font-family: 'Lato', sans-serif;
   background-color: #e1e1e1;
-  background-image: linear-gradient(30deg, #c7c7c7 12%, transparent 12.5%, transparent 87%, #c7c7c7 87.5%, #c7c7c7), linear-gradient(150deg, #c7c7c7 12%, transparent 12.5%, transparent 87%, #c7c7c7 87.5%, #c7c7c7), linear-gradient(30deg, #c7c7c7 12%, transparent 12.5%, transparent 87%, #c7c7c7 87.5%, #c7c7c7), linear-gradient(150deg, #c7c7c7 12%, transparent 12.5%, transparent 87%, #c7c7c7 87.5%, #c7c7c7), linear-gradient(60deg, #fafafa 25%, transparent 25.5%, transparent 75%, #fafafa 75%, #fafafa), linear-gradient(60deg, #fafafa 25%, transparent 25.5%, transparent 75%, #fafafa 75%, #fafafa);
+  background-image: linear-gradient(30deg, #d4d4d4 12%, transparent 12.5%, transparent 87%, #d4d4d4 87.5%, #d4d4d4), linear-gradient(150deg, #d4d4d4 12%, transparent 12.5%, transparent 87%, #d4d4d4 87.5%, #d4d4d4), linear-gradient(30deg, #d4d4d4 12%, transparent 12.5%, transparent 87%, #d4d4d4 87.5%, #d4d4d4), linear-gradient(150deg, #d4d4d4 12%, transparent 12.5%, transparent 87%, #d4d4d4 87.5%, #d4d4d4), linear-gradient(60deg, #fafafa 25%, transparent 25.5%, transparent 75%, #fafafa 75%, #fafafa), linear-gradient(60deg, #fafafa 25%, transparent 25.5%, transparent 75%, #fafafa 75%, #fafafa);
   background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
   background-size: 80px 140px;
   background-attachment: fixed;
@@ -373,6 +373,24 @@ body .pagination_unvx .pagination_unvx_btns .page-position {
   background: rgba(250, 250, 250, 0.7);
   -khtml-border-radius: 0.2em;
 }
+.article_unvx table {
+  border-collapse: collapse;
+  width: 100%;
+}
+.article_unvx table th {
+  background-color: #007d7d;
+}
+.article_unvx table td,
+.article_unvx table th {
+  border: 1px solid #c7c7c7;
+  padding: 0.2em 0.5em;
+}
+.article_unvx table tr:nth-child(even) {
+  background-color: #e7e7e7;
+}
+.article_unvx table tr:hover {
+  background-color: #c7c7c7;
+}
 .article_unvx_item {
   margin: 0.2em;
   color: #fafafa;
@@ -492,5 +510,8 @@ body .pagination_unvx .pagination_unvx_btns .page-position {
   }
   .header_unvx .menu_unvx .pure-menu-item.social_unvx span {
     display: inline;
+  }
+  .hide-span {
+    display: none;
   }
 }
