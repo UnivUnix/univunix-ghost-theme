@@ -1,6 +1,6 @@
 {
   "name": "univunix",
-  "version": "1.7.0",
+  "version": "1.7.1",
   "description": "Theme of UnivUnix for Ghost CMS.",
   "engines": {
     "ghost": ">=1.2.0",
@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/UnivUnix/univunix-ghost-theme#readme",
   "config": {
-    "posts_per_page": 8,
+    "posts_per_page": 12,
     "image_sizes": {
       "article-item": {
         "width": 500
