@@ -4,7 +4,7 @@
   <div class="pure-u-1">
     <h1 class="title">{{t "Articles tagged with:"}} {{tag.name}}</h1>
   </div>
-  {{#foreach posts}}
+  {{#foreach posts limit=12}}
     {{> article-item}}
   {{/foreach}}
 </main>

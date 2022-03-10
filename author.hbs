@@ -6,7 +6,7 @@
     <h1 class="title">{{t "Articles written by:"}} {{name}}</h1>
   </div>
   {{/author}}
-  {{#foreach posts}}
+  {{#foreach posts limit=12}}
     {{> article-item}}
   {{/foreach}}
 </main>
